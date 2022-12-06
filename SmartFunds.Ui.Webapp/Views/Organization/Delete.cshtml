@@ -1,0 +1,17 @@
+﻿@model Organization
+
+@{
+    ViewBag.Title = "Delete Organization";
+}
+
+<h1>Deleting organization</h1>
+<p>Are you sure you want to delete organization &quot;@Model.Name&quot;</p>
+
+<form method="post">
+    <a asp-action="Index" class="btn btn-secondary">
+        <i class="fa fa-arrow-left"></i> No
+    </a>
+    <button type="submit" class="btn btn-danger">
+        <i class="fa fa-trash"></i> Yes
+    </button>
+</form>

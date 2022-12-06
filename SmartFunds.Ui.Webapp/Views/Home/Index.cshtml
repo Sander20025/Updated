@@ -1,0 +1,15 @@
+﻿@model IList<Organization>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Organizations</h1>
+
+<div class="row">
+    @foreach (var organization in Model)
+    {
+        <div class="col-4 mb-1">
+            <partial name="OrganizationPartial" model="organization"/>
+        </div>
+    }
+</div>

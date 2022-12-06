@@ -1,0 +1,19 @@
+﻿@model Organization
+
+@{
+    ViewBag.Title = "Add";
+}
+
+<h1>Add a new Organization</h1>
+
+<form method="post">
+    <partial name="CreateEditPartial" model="Model"/>
+    
+    <a asp-action="Index" class="btn btn-secondary">&lt; Back</a>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial"/>
+}

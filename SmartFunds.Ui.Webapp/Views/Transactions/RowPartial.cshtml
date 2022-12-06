@@ -1,0 +1,31 @@
+﻿@model Transaction
+
+<tr>
+    <td>@Model.TimeStamp.ToLocalTime().ToLongDateString() @Model.TimeStamp.ToLocalTime().ToLongTimeString()</td>
+    <td>@Model.Owner</td>
+    <td>
+        @{
+            var amountColor = "text-success";
+            var amountBackgroundColor = "";
+            if (Model.Amount == 0)
+            {
+                amountBackgroundColor = "background-color:#555;color:#EEE";
+            }
+            if (Model.Amount < 0)
+            {
+                amountColor = "text-danger";
+            }
+        }
+        <i class="fa fa-euro" style="color: gold;"></i> <span class="@amountColor" style="@amountBackgroundColor">@Model.Amount</span>
+    </td>
+    <td>@Model.Remarks</td>
+    <td>
+        <button class="btn btn-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#deleteModal"
+                data-id="@Model.Id"
+                data-role="Delete">
+            <i class="fa fa-trash"></i>
+        </button>
+    </td>
+</tr>

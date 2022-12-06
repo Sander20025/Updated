@@ -1,0 +1,24 @@
+﻿@model Organization
+
+<div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+<div class="mb-3">
+    <label asp-for="Name" class="form-label"></label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name"></span>
+</div>
+<div class="mb-3">
+    <label asp-for="Type" class="form-label"></label>
+    <input asp-for="Type" class="form-control" />
+    <span asp-validation-for="Type"></span>
+</div>
+<div class="mb-3">
+    <label asp-for="CompanyNumber" class="form-label"></label>
+    <input asp-for="CompanyNumber" class="form-control" />
+    <span asp-validation-for="CompanyNumber"></span>
+</div>
+<div class="mb-3">
+    <label asp-for="Email" class="form-label"></label>
+    <input asp-for="Email" class="form-control" />
+    <span asp-validation-for="Email"></span>
+</div>
